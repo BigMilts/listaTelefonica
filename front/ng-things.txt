@@ -1,0 +1,11 @@
+ng-bind --> serve para pegar algo do $scope e exibir na view
+ng-repeat --> percorre um array
+ng-show/ng-hide --> recebe um boolean e determina se o display da tag vai ser none
+ng-if --> recebe um boolean e determina se a tag irá ou não existir
+ng-app --> principal para mapear a view
+ng-model --> pega da view para o controller --> util para inputs e formulários
+ng-include --> pega elementos dinamicamente de outro arquivo
+form possui um objeto q é pegado atraves do atributo name, possuindo o objeto $error que possui atributos utéis
+filter --> usado no para filtrar a partir de um parametro, funciona em tempo real
+diretivas = propriedades do angular js
+ng-form = formulario do angularjs, utilizar o name no form para obter os dados.

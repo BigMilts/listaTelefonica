@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app = "listaTelefonica">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Telefonica</title>
+    <link rel="stylesheet" href="./lib/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/ui.css">
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular/angular-route.js"></script>
+    <script src="./lib/angularLocaleBr.js"></script>
+    <script src="./lib/angular-messages.js"></script>
+    <script src="./lib/serialGenerator/serialGenerator.js"></script>
+    <script src="./lib/ui/ui.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/listaTelefonicaCtrl.js"></script>
+    <script src="./js/controllers/novoContatoCtrl.js"></script>
+    <script src="./js/controllers/detalhesContatoCtrl.js"></script>
+    <script src="./js/services/contatosApiService.js"></script>
+    <script src="./js/services/operadorasApiService.js"></script>
+    <script src="./js/confingvalue.js"></script>
+    <script src="./js/config/routeConfig.js"></script>
+    <script src="./js/config/serialGeneratorConfig.js"></script>
+    <script src="./js/filters/nameFilter.js"></script>
+    <script src="./js/filters/elipseFilter.js"></script>
+    <script src="./js/directives/uiAlertDirective.js"></script>
+    <script src="./js/directives/uiDateDirective.js"></script>
+    <script src="./js/timestampInterceptor.js"></script>
+    <script src="./js/config/interceptorsConfig.js"></script>
+    <script src="./js/interceptors/errorInterceptor.js"></script>
+    <script src="./js/interceptors/loadingInterceptor.js"></script>
+</head>
+
+<body> 
+    <div ng-show="loading" class="jumbotron">
+        <h5>Carregando, por favor aguarde...</h5>
+    </div>
+    <div ng-hide ="loading">
+        <div ng-view></div>
+        <div ng-include ="'./view/footer.html'"></div>
+    </div>
+</body>
+</html>
